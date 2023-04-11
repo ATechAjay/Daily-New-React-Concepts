@@ -1,5 +1,7 @@
 // Step 1: Create an HTML element using ReactJS.
 
+import React from "react";
+import ReactDOM from "react-dom";
 const element = React.createElement("div", { class: "parent" }, [
   React.createElement("div", { Style: "background:red", class: "child1" }, [
     React.createElement(
