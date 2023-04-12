@@ -2958,18 +2958,51 @@ const element = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
     ])
 ]);
 // It's also a JSX element same as above.
-const jsxElement = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-    children: "This is my heading 2."
-}, void 0, false, {
-    fileName: "index.js",
-    lineNumber: 36,
-    columnNumber: 20
-}, undefined);
+// const jsxElement = <h2>This is my heading 2.</h2>;
+// Component and Component composition
+const Child = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+        children: "This is my child component"
+    }, void 0, false, {
+        fileName: "index.js",
+        lineNumber: 39,
+        columnNumber: 21
+    }, undefined);
+_c = Child;
+const Parent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "This is my parent component with composition"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 42,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Child, {}, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 43,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "index.js",
+        lineNumber: 41,
+        columnNumber: 3
+    }, undefined);
+_c1 = Parent;
 // Step 2: Create a Root element using ReactJS.
 const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
 // Step 3: Render all HTML elements using ReactJS on the web page.
-root.render(element);
-root.render(jsxElement);
+// root.render(element);
+// root.render(jsxElement);
+// root.render(<Child />);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Parent, {}, void 0, false, {
+    fileName: "index.js",
+    lineNumber: 54,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Child");
+$RefreshReg$(_c1, "Parent");
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {

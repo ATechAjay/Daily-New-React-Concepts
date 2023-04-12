@@ -33,10 +33,22 @@ const element = React.createElement("div", { class: "parent" }, [
   ),
 ]);
 // It's also a JSX element same as above.
-const jsxElement = <h2>This is my heading 2.</h2>;
+// const jsxElement = <h2>This is my heading 2.</h2>;
+
+// Component and Component composition
+const Child = () => <h2>This is my child component</h2>;
+const Parent = () => (
+  <div>
+    <h1>This is my parent component with composition</h1>
+    <Child />
+  </div>
+);
+
 // Step 2: Create a Root element using ReactJS.
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Step 3: Render all HTML elements using ReactJS on the web page.
-root.render(element);
-root.render(jsxElement);
+// root.render(element);
+// root.render(jsxElement);
+// root.render(<Child />);
+root.render(<Parent />);
