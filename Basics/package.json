@@ -4,7 +4,8 @@
   "description": "This is my first app",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html"
   },
   "keywords": [
     "react",
